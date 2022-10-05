@@ -1,0 +1,52 @@
+<script setup>
+
+</script>
+<template>
+	<div class="progress">
+		<div class="progress--head flex justify-between">
+			<p class="progress--title">Progress</p>
+			<p class="progress--value">%32</p>
+		</div>
+		<progress id="file" value="32" max="100"> 32% </progress>
+	</div>
+</template>
+<style lang="scss">
+.progress {
+	width: 447px;
+
+	&--head {
+		color: #717986;
+	}
+
+	&--title {
+		font-size: 15px;
+		line-height: 15.23px;
+		font-weight: 500;
+	}
+
+	&--value{
+		font-size: 12px;
+		line-height: 14.06px;
+		font-weight: 400;
+		color: #3C557A;
+	}
+
+}
+
+
+progress {
+	border-radius: 7px;
+	width: 447px;
+	height: 8px;
+}
+
+progress::-webkit-progress-bar {
+	background-color: #F1F2F7;
+	border-radius: 75px;
+}
+
+progress::-webkit-progress-value {
+	background-color: #1BE3A7;
+	border-radius: 75px;
+}
+</style>
