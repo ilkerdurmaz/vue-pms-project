@@ -11,49 +11,57 @@
 	
 	<template>
 		<aside :class="`${is_expanded && 'is-expanded'}`">
-			<div class="menu-toggle-wrap">
-				<button class="menu-toggle" @click="ToggleMenu">
-					<span class="material-icons">menu_open</span>
-				</button>
-			</div>
+			
 			<div class="logo">
-				<img src="../assets/svg/logo.svg" alt="Vue" />
+				<div class="logo__content">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="12" cy="12" r="10" stroke="#0075FF" stroke-width="4"/>
+					</svg>
+					<h1 class="logo__text" >ChirKuut</h1>
+			</div>
+
+					<div class="menu-toggle-wrap">
+						<button class="menu-toggle" @click="ToggleMenu">
+							<span class="material-icons">menu_open</span>
+						</button>
+					</div>
 			</div>
 	
 			<div class="menu">
-				<router-link class="button">
+				<div class="button">
 					<span class="material-icons">home</span>
 					<span class="text">Dashboard</span>
-				</router-link>
-				<router-link class="button">
+				</div>
+				<div class="button">
 					<span class="material-icons">grid_view</span>
 					<span class="text">Projects</span>
-				</router-link>
-				<router-link class="button">
+				</div>
+				<div class="button">
 					<span class="material-icons">schema</span>
 					<span class="text">Modules</span>
-				</router-link>
-				<router-link class="button">
+				</div>
+				<div class="button">
 					<span class="material-icons">send</span>
 					<span class="text">Sprint</span>
-				</router-link>
-				<router-link class="button">
+				</div>
+				<div class="button">
 					<span class="material-icons">group</span>
 					<span class="text">Members</span>
-				</router-link>
-				<router-link class="button">
+				</div>
+				<div class="button">
 					<span class="material-icons">browser_updated</span>
 					<span class="text">Reports</span>
-				</router-link>
-			</div>
-	
-			<div class="flex"></div>
-			<div class="menu">
-				<router-link class="button">
+				</div>
+				
+				<div class="logOut">
 					<span class="material-icons">logout</span>
 					<span class="text">LogOut</span>
-				</router-link>
+				</div>
+
+
 			</div>
+	
+
 		</aside>
 	</template>
 	
@@ -64,92 +72,117 @@
 		width:315px;
 		min-height: 100vh;
 		overflow: hidden;
-		padding: 1rem;
-		background-color: var(--light);
-		color: var(--dark-alt);
+		// background-color: var(--light);
+		color: #717986;
 		transition: 0.2s ease-out;
-	
-		.flex {
-			flex: 1 1 0;
-		}
+		border-right: 1px solid #e5e5e5;
 	
 		.logo {
-			margin-bottom: 2rem;
-	
+			display: flex;
+			align-items: center;
+			height: 50px;
+			width: 315px;
+			position: relative;
+			padding: 44px 18px 0px 40px;
+
+			&__content{
+				width:100%;
+				display: flex;
+				align-items: center;
+
+			}
+			&__text{
+				font-style: normal;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 23px;
+				margin-left: 10px;
+				color: black;
+				}
+
 			img {
 				width: 7rem;
 			}
 		}
-	
+
 		.menu-toggle-wrap {
-			display: flex;
-			justify-content: flex-end;
-			margin-bottom: 1rem;
-	
-			position: relative;
-			top: 0;
+			position: absolute;
+			right: 10px;
 			transition: 0.2s ease-out;
-	
 			.menu-toggle {
 				transition: 0.2s ease-out;
 	
 				.material-icons {
 					font-size: 1.5rem;
-					color: var(--dark-alt);
+					color: #717986;
 				}
 	
 				&:hover {
 					.material-icons {
-						color: var(--primary);
-						transform: translateX(0.5rem);
+						color: #717986;
 					}
 				}
 			}
 		}
 	
 		.button .text {
-			opacity: 0;
+			opacity: 1;
 			transition: 0.3s ease-out;
 		}
 		.menu {
-			margin: 0 -1rem;
+			margin: 47px 0 0 0;
+			position: relative;
 	
 			.button {
 				display: flex;
 				align-items: center;
 				text-decoration: none;
-	
-				padding: 0.5rem 1rem;
 				transition: 0.2s ease-out;
-	
+				border-radius: 8px;
+				margin: 0px 20px 5px 20px;
+				padding: 16px 0 17px 0;
+				cursor: pointer;
+				
 				.material-icons {
-					font-size: 1.5rem;
-					color: var(--dark);
+					padding-left: 29.67px;
+					color: #717986;
 					transition: 0.2s ease-out;
 				}
 	
 				.text {
-					color: var(--dark);
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 19px;
+					color: #717986;
+					margin-left: 18.5px;
 					transition: 0.2s ease-out;
 				}
 	
 				&:hover {
-					background-color: var(--dark-alt);
+					background-color: #F9F9F9;
 	
-					.material-icons .text {
-						color: var(--primary);
+					.material-icons  {
+						color: #00DB99;
 					}
+
+					.text {
+						color: #00DB99;
+					}
+
 				}
 			}
 		}
 	
 		&.is-expanded {
-			width: var(--sidebar-width);
-	
+			width: 80px;
+			.logo__content {
+				visibility: hidden;
+			}
 			.menu-toggle-wrap {
-				top: 0rem;
+				left: 55px;
 				.menu-toggle {
-					transform: rotate(0deg);
+					// transform: rotate(0deg);
 				}
 			}
 	
@@ -165,10 +198,6 @@
 			}
 		}
 	
-		@media (max-widht: 768px) {
-			position: fixed;
-			z-index: 99;
-		}
 	}
 	</style>
 	
