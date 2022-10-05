@@ -1,11 +1,12 @@
 <script setup>
 	import { ref } from "vue";
 	
-	const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
-	
+	const is_expanded = ref(false);
+
 	const ToggleMenu = () => {
 		is_expanded.value = !is_expanded.value;
 	};
+	console.log(is_expanded.value);
 	</script>
 	
 	<template>
@@ -60,14 +61,12 @@
 	aside {
 		display: flex;
 		flex-direction: column;
-		width: calc(1rem + 32px);
+		width:315px;
 		min-height: 100vh;
 		overflow: hidden;
 		padding: 1rem;
-	
 		background-color: var(--light);
 		color: var(--dark-alt);
-	
 		transition: 0.2s ease-out;
 	
 		.flex {
