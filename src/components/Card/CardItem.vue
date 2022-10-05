@@ -1,5 +1,6 @@
 <script setup>
 import Progress from '../Progress.vue';
+import CardCounter from './CardCounter.vue'
 
 </script>
 <template>
@@ -31,8 +32,11 @@ import Progress from '../Progress.vue';
 				<p class="status--text">Status</p>
 				<p style="font-size:13px; color: #00DB99;">status gelecek</p>
 			</div>
-			<div class="body--info" style="width:148px; height:70px; background-color: gray;">
-				safasfsa
+			<div class="body--info" >
+				<div class="counter-group">
+					<CardCounter :data="{number : 24, name : 'Task'}"></CardCounter>
+					<CardCounter :data="{number : 1, name : 'Members'}"></CardCounter>
+				</div>
 			</div>
 		</div>
 		<div class="members" style="height:60px; background-color:gray;">
@@ -106,7 +110,8 @@ import Progress from '../Progress.vue';
 		}
 
 		.body--status {
-			margin-top:15px;
+			margin-top: 15px;
+
 			.status--text {
 				color: #717986;
 				font-size: 12px;

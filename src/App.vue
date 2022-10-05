@@ -5,10 +5,10 @@ import Card from './components/Card/Card.vue';
 
 <template>
 	<Card />
-	<div class="counter-group">
+	<!-- <div class="counter-group">
 		<CardCounter :data="{number : 14, name : 'Task'}"></CardCounter>
 		<CardCounter :data="{number : 1, name : 'Members'}"></CardCounter>
-	</div>
+	</div> -->
 </template>
 
 <!-- <template>
