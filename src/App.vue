@@ -53,4 +53,3 @@
 		border: none;
 		background: none;
 	}
-</style>
