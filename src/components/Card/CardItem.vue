@@ -40,12 +40,9 @@ import Progress from '../Progress.vue';
 			<p>safsa</p>
 		</div>
 		<div class="card-footer">
-			<Progress></Progress>
-
+			<Progress value="38"></Progress>
 		</div>
-
 	</div>
-
 </template>
 <style lang="scss">
 .card {
@@ -56,14 +53,10 @@ import Progress from '../Progress.vue';
 	background: #FFFFFF;
 	border: 1px solid #E5E5E5;
 	border-radius: 8px;
-	margin: 25px;
 
 	&:hover {
 		box-shadow: 0px 3px 36px 12px #507EA91F;
-
-
 	}
-
 
 	&--head {
 		color: #8B8B8B;
@@ -79,6 +72,10 @@ import Progress from '../Progress.vue';
 		.head--icon {
 			:not(:last-child) {
 				margin-right: 12px;
+			}
+
+			&>span {
+				cursor: pointer;
 			}
 		}
 	}
@@ -106,7 +103,7 @@ import Progress from '../Progress.vue';
 		}
 
 		.body--status {
-			margin-top:15px;
+
 			.status--text {
 				color: #717986;
 				font-size: 12px;
