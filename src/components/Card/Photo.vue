@@ -10,6 +10,7 @@ const props = defineProps(["image", "size"]);
 		:height="props.size"
 	/>
 </template>
+
 <style lang="scss">
 .photo {
 	border-radius: 50%;

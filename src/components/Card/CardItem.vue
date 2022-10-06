@@ -37,7 +37,7 @@ const addUser = () => {
 			</div>
 			<div class="body--status">
 				<p class="status--text">Status</p>
-				<CardStatus status="OnHold"></CardStatus>
+				<CardStatus status="Active"></CardStatus>
 				<!-- <p style="font-size: 13px; color: #00db99">status gelecek-1</p> -->
 			</div>
 			<div class="body--info">
@@ -53,8 +53,6 @@ const addUser = () => {
 				<Photo v-for="img in images" :key="img" :image="img" size="32"></Photo>
 				<AddPhoto @setUser="addUser"></AddPhoto>
 			</div>
-
-			<!-- <p>safsa</p> -->
 		</div>
 		<div class="card-footer">
 			<Progress></Progress>
@@ -107,6 +105,7 @@ const addUser = () => {
 				font-size: 12px;
 				line-height: 14.06px;
 				font-weight: 400;
+				margin-bottom: 8px;
 			}
 
 			.date--format {
@@ -117,13 +116,12 @@ const addUser = () => {
 		}
 
 		.body--status {
-			margin-top: 15px;
-
 			.status--text {
 				color: #717986;
 				font-size: 12px;
 				line-height: 14.06px;
 				font-weight: 400;
+				margin-bottom: 8px;
 			}
 		}
 	}
