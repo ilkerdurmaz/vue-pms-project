@@ -33,6 +33,10 @@ function selectTab(value) {
 
 	return;
 }
+
+function sortClick() {
+	console.log("sort button clicked");
+}
 </script>
 
 <template>
@@ -46,7 +50,7 @@ function selectTab(value) {
 				@click="selectTab(title.name)"
 			/>
 		</div>
-		<SortGroup />
+		<SortGroup @sortClick="sortClick" />
 	</div>
 </template>
 

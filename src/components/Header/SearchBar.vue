@@ -24,10 +24,10 @@
 	align-items: center;
 	background: #f1f2f7;
 	border-radius: 8px;
-	width: 442px;
 	height: 3rem;
 	padding: 0 20px;
-	margin: 0 auto;
+	width: 400px;
+	margin: 0 2rem;
 	svg {
 		margin: 14px 12px 14px 0;
 	}

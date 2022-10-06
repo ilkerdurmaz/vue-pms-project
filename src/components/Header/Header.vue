@@ -11,7 +11,9 @@ function plusButtonClick() {
 <template>
 	<div class="header_container">
 		<div class="header_top">
-			<h1 class="header_title">Projects</h1>
+			<div>
+				<h1 class="header_title">Projects</h1>
+			</div>
 			<SearchBar />
 			<div class="header_top_right">
 				<div class="icons_container">
@@ -45,6 +47,7 @@ function plusButtonClick() {
 .header_top {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 .header_title {
 	margin: 0;
@@ -61,7 +64,6 @@ function plusButtonClick() {
 .header_top_right {
 	display: flex;
 	justify-content: center;
-	margin-left: auto;
 }
 
 .icons_container {

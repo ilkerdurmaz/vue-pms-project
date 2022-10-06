@@ -15,7 +15,7 @@
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	margin: 0 4.25rem 0 3.25rem;
+	margin: 0 0 0 3.25rem;
 	img {
 		border-radius: 50%;
 		width: 40px;
