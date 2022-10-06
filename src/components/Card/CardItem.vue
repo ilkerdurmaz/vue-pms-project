@@ -1,27 +1,34 @@
 <script setup>
-import Progress from '../Progress.vue';
-import CardCounter from './CardCounter.vue'
+import Progress from "../Progress.vue";
+import CardCounter from "./CardCounter.vue";
+import Photo from "./Photo.vue";
+import AddPhoto from "./AddPhoto.vue";
+import CardStatus from "./CardStatus.vue";
 
+const images = [
+	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+	"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
+	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg",
+];
+
+const addUser = () => {
+	console.log("Add Photo");
+};
 </script>
 <template>
 	<div class="card flex justify-between flex-column">
 		<div class="card--head flex flex-column">
 			<div class="flex flex-row justify-between">
-				<p class="head--title">
-					Project Title goes here
-				</p>
+				<p class="head--title">Project Title goes here</p>
 				<div class="head--icon">
-					<span class="material-symbols-outlined">
-						edit
-					</span>
-					<span class="material-symbols-outlined">
-						more_vert
-					</span>
+					<span class="material-symbols-outlined"> edit </span>
+					<span class="material-symbols-outlined"> more_vert </span>
 				</div>
 			</div>
-			<div style="font-size:13px; color: #00DB99;">
-				status gelecek
-			</div>
+			<div style="font-size: 13px; color: #00db99">status gelecek</div>
 		</div>
 		<div class="card--body flex flex-row justify-between items-center">
 			<div class="body--date flex flex-column">
@@ -30,26 +37,29 @@ import CardCounter from './CardCounter.vue'
 			</div>
 			<div class="body--status">
 				<p class="status--text">Status</p>
-				<p style="font-size:13px; color: #00DB99;">status gelecek</p>
+				<CardStatus status="OnHold"></CardStatus>
+				<!-- <p style="font-size: 13px; color: #00db99">status gelecek-1</p> -->
 			</div>
-			<div class="body--info" >
+			<div class="body--info">
 				<div class="counter-group">
-					<CardCounter :data="{number : 24, name : 'Task'}"></CardCounter>
-					<CardCounter :data="{number : 1, name : 'Members'}"></CardCounter>
+					<CardCounter :data="{ number: 24, name: 'Task' }"></CardCounter>
+					<CardCounter :data="{ number: 1, name: 'Members' }"></CardCounter>
 				</div>
 			</div>
 		</div>
-		<div class="members" style="height:60px; background-color:gray;">
-			<p>safsa</p>
-			<p>safsa</p>
+		<div class="members">
+			<p class="members--text">Members</p>
+			<div class="photos">
+				<Photo v-for="img in images" :key="img" :image="img" size="32"></Photo>
+				<AddPhoto @setUser="addUser"></AddPhoto>
+			</div>
+
+			<!-- <p>safsa</p> -->
 		</div>
 		<div class="card-footer">
 			<Progress></Progress>
-
 		</div>
-
 	</div>
-
 </template>
 <style lang="scss">
 .card {
@@ -57,23 +67,20 @@ import CardCounter from './CardCounter.vue'
 	width: 495px;
 	height: 300px;
 	padding: 24px;
-	background: #FFFFFF;
-	border: 1px solid #E5E5E5;
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
 	border-radius: 8px;
 	margin: 25px;
 
 	&:hover {
-		box-shadow: 0px 3px 36px 12px #507EA91F;
-
-
+		box-shadow: 0px 3px 36px 12px #507ea91f;
 	}
 
-
 	&--head {
-		color: #8B8B8B;
+		color: #8b8b8b;
 
 		.head--title {
-			color: #3C557A;
+			color: #3c557a;
 			font-weight: 500;
 			font-size: 18px;
 			line-height: 21.09px;
@@ -120,7 +127,19 @@ import CardCounter from './CardCounter.vue'
 			}
 		}
 	}
+	.members--text {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 15px;
+		color: #717986;
+		padding-bottom: 12px;
+	}
+	.photos {
+		display: flex;
+		gap: 4px;
+	}
 
-	&--footer {}
+	&--footer {
+	}
 }
 </style>
