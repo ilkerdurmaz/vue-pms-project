@@ -38,12 +38,10 @@ const addUser = () => {
 			<div class="body--status">
 				<p class="status--text">Status</p>
 				<CardStatus status="Active"></CardStatus>
-				<!-- <p style="font-size: 13px; color: #00db99">status gelecek-1</p> -->
 			</div>
 			<div class="body--info">
 				<div class="counter-group">
-					<CardCounter :data="{ number: 24, name: 'Task' }"></CardCounter>
-					<CardCounter :data="{ number: 1, name: 'Members' }"></CardCounter>
+					<CardCounter :data="[14, 4]"></CardCounter>
 				</div>
 			</div>
 		</div>
@@ -59,6 +57,7 @@ const addUser = () => {
 		</div>
 	</div>
 </template>
+
 <style lang="scss">
 .card {
 	box-sizing: border-box;
@@ -135,9 +134,6 @@ const addUser = () => {
 	.photos {
 		display: flex;
 		gap: 4px;
-	}
-
-	&--footer {
 	}
 }
 </style>
