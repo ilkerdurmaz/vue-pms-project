@@ -66,7 +66,6 @@ const ToggleMenu = () => {
 	min-height: 100vh;
 	overflow: hidden;
 	transition: 0.2s ease-out;
-	border-right: 1px solid #F1F2F7;
 	position: relative;
 
 	&__header {

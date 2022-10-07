@@ -51,7 +51,7 @@ const props = defineProps(["task", "users"]);
 		}
 	}
 
-	.line {
+	&--line {
 		height: 42px;
 		width: 1px;
 		background: #cddcee;

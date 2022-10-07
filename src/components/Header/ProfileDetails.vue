@@ -1,4 +1,5 @@
 <script setup>
+import Photo from "../Card/Photo.vue";
 defineProps({
 	name: {
 		type: String,
@@ -17,7 +18,7 @@ defineProps({
 </script>
 <template>
 	<div class="profile">
-		<img :src="imgSrc" />
+		<Photo :src="imgSrc" size="40" />
 		<div class="profile--details">
 			<h4>{{ name }}</h4>
 			<p>{{ mail }}</p>

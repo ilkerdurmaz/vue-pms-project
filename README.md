@@ -1,9 +1,39 @@
-# Vue 3 + Vite
+# PMS Dashboard Project
 
-![image](https://user-images.githubusercontent.com/72731296/194562664-d99bdd33-ad55-42ea-96b5-22afe4203534.png)
+This is a web application that demonstrates a project management system dashboard panel.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![projectGIF](https://user-images.githubusercontent.com/14932895/194628705-1fb0256d-70c2-4ee7-8846-273a8bb724b6.gif)
+
+## [DEMO](https://earthlings-pms.netlify.app/)
+
+## Getting Started
+
+To get started you can simply clone this `vue-dashboard-team-earth-1` repository and install the dependencies.
+
+Clone the `vue-dashboard-team-earth-1` repository using git:
+
+```bash
+git clone https://github.com/Front-End-Bootcamp/vue-dashboard-team-earth-1.git
+cd vue-dashboard-team-earth-1
+```
+
+Install dependencies with this command:
+
+```bash
+npm install
+```
+
+Run the application with this command:
+
+```bash
+npm run dev
+```
 
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+### Build With:
+
+- [Vue.js](https://vuejs.org/)
+- [SCSS](https://sass-lang.com)

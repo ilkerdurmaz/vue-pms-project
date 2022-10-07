@@ -2,7 +2,7 @@
 import Tab from "./Tab.vue";
 import SortGroup from "./SortGroup.vue";
 import { ref } from "vue";
-
+const emit = defineEmits(["selectedTab"]);
 const titles = ref([
 	{
 		name: "All",
@@ -17,7 +17,7 @@ const titles = ref([
 		active: false,
 	},
 	{
-		name: "On hold",
+		name: "OnHold",
 		active: false,
 	},
 	{
@@ -26,8 +26,8 @@ const titles = ref([
 	},
 ]);
 
-function selectTab(value) {
-	console.log(value + " tab selected.");
+function selectHandler(value) {
+	emit("selectedTab", value);
 	titles.value = titles.value.map((item) =>
 		item.name === value ? { ...item, active: true } : { ...item, active: false }
 	);
@@ -44,8 +44,13 @@ function sortClick() {
 <template>
 	<div class="tabs-container">
 		<div class="tabs-container--tabs">
-			<Tab v-for="title in titles" :key="title.name" :title="title.name" :active="title.active"
-				@click="selectTab(title.name)" />
+			<Tab
+				v-for="title in titles"
+				:key="title.name"
+				:title="title.name"
+				:active="title.active"
+				@click="selectHandler(title.name)"
+			/>
 		</div>
 		<SortGroup @sortClick="sortClick" />
 	</div>

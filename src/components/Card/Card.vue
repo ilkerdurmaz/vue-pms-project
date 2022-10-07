@@ -1,28 +1,149 @@
 <script setup>
-	import CardItem from './CardItem.vue';
-	import ProjectData from "../../assets/data/ProjectData.json";
+import { ref } from "vue";
+import Progress from "./Progress.vue";
+import CardCounter from "./CardCounter.vue";
+import Photo from "./Photo.vue";
+import AddPhoto from "./AddPhoto.vue";
+import CardStatus from "./CardStatus.vue";
+import Icon from "../Icons/Icon.vue";
+
+const addUser = () => {
+	console.log("Add Photo");
+};
+const props = defineProps(["cardData"]);
 </script>
 
 <template>
-	<div class="card--container">
-		<CardItem v-for=" data in ProjectData " :data="data" />
+	<div class="card flex justify-between flex-column">
+		<div class="card--head flex flex-column">
+			<div class="flex flex-row justify-between">
+				<p class="head--title">{{ props.cardData.title }}</p>
+				<div class="head--icon">
+					<Icon icon="edit" />
+					<Icon icon="more_vert " />
+				</div>
+			</div>
+		</div>
+		<div class="card--body flex flex-row justify-between items-center">
+			<div class="body--date flex flex-column">
+				<p class="date--text">Start date</p>
+				<p class="date--format">{{ props.cardData.date }}</p>
+			</div>
+			<div class="body--status">
+				<p class="status--text">Status</p>
+				<CardStatus :status="props.cardData.status"></CardStatus>
+			</div>
+			<div class="body--info">
+				<div class="counter-group">
+					<CardCounter
+						:task="props.cardData.tasks"
+						:users="props.cardData.members"
+					></CardCounter>
+				</div>
+			</div>
+		</div>
+		<div class="members">
+			<p class="members--text">Members</p>
+			<div class="photos">
+				<Photo
+					v-for="img in props.cardData.image"
+					:key="img"
+					:image="img"
+					size="32"
+				></Photo>
+				<AddPhoto @setUser="addUser"></AddPhoto>
+			</div>
+		</div>
+		<div class="card-footer">
+			<Progress
+				:status="props.cardData.status"
+				:value="props.cardData.progress"
+			></Progress>
+		</div>
 	</div>
 </template>
 
 <style lang="scss">
-	.card--container {
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		padding: 0px 0px 0px 30px;
+.card {
+	box-sizing: border-box;
+	height: 300px;
+	padding: 24px;
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	margin: 0px 20px 30px 0px;
 
-		@media (max-width: 1500px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@media (max-width: 1000px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-
+	&:hover {
+		box-shadow: 0px 3px 36px 12px #507ea91f;
 	}
+
+	&--head {
+		color: #8b8b8b;
+
+		.head--title {
+			color: #3c557a;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 21.09px;
+			gap: 16px;
+		}
+
+		.head--icon {
+			display: flex;
+
+			:not(:last-child) {
+				margin-right: 12px;
+			}
+		}
+	}
+
+	&--body {
+		height: 73px;
+
+		.body--date {
+			color: #717986;
+			font-size: 13px;
+			line-height: 15.23px;
+			font-weight: 500;
+
+			.date--text {
+				font-size: 12px;
+				line-height: 14.06px;
+				font-weight: 400;
+				margin-bottom: 8px;
+			}
+
+			.date--format {
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 15.23px;
+			}
+		}
+
+		.body--status {
+			.status--text {
+				color: #717986;
+				font-size: 12px;
+				line-height: 14.06px;
+				font-weight: 400;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.members {
+		.members--text {
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+			color: #717986;
+			padding-bottom: 12px;
+		}
+
+		.photos {
+			display: flex;
+			gap: 4px;
+		}
+	}
+}
 </style>

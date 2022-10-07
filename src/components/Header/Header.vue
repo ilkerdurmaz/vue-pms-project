@@ -7,10 +7,15 @@ import Icon from "../Icons/Icon.vue";
 import { ref } from "vue";
 
 const props = defineProps(["title"]);
+const emit = defineEmits(["tabValue"]);
+
+function filterTab(value) {
+	emit("tabValue", value);
+}
 
 function searchTriggered(value) {
 	console.log("Search value: " + value);
-	return
+	return;
 }
 function plusButtonClick() {
 	console.log("PlusButton Clicked");
@@ -28,14 +33,13 @@ const icons = ref([
 		name: "settings",
 	},
 ]);
-
 </script>
 
 <template>
 	<div class="header">
 		<div class="header--top">
 			<div>
-				<h1 class="top--title">{{props.title}}</h1>
+				<h1 class="top--title">{{ props.title }}</h1>
 			</div>
 			<SearchBar @search="searchTriggered" />
 			<div class="top--right">
@@ -47,7 +51,7 @@ const icons = ref([
 		</div>
 		<div class="header--bottom">
 			<PlusButton @btnClick="plusButtonClick" />
-			<FilterTabs />
+			<FilterTabs @selectedTab="filterTab" />
 		</div>
 	</div>
 </template>
@@ -95,7 +99,6 @@ const icons = ref([
 		display: flex;
 		gap: 30px;
 	}
-
 }
 
 .material-icons {
