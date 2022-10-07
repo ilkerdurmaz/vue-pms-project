@@ -16,43 +16,47 @@ defineProps({
 });
 </script>
 <template>
-	<div class="profile_details">
+	<div class="profile">
 		<img :src="imgSrc" />
-		<div class="name_group">
+		<div class="profile--details">
 			<h4>{{ name }}</h4>
 			<p>{{ mail }}</p>
 		</div>
 	</div>
 </template>
 <style lang="scss" scoped>
-.profile_details {
+.profile {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	margin: 0 0 0 3.25rem;
+
 	img {
 		border-radius: 50%;
 		width: 40px;
 	}
-}
-.name_group {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 4px;
-	h4 {
-		margin: 0;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 19px;
-		color: #25364f;
-	}
-	p {
-		margin: 0;
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 14px;
-		color: #8b8b8b;
+
+	&--details {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+
+		h4 {
+			margin: 0;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: #25364f;
+		}
+
+		p {
+			margin: 0;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 14px;
+			color: #8b8b8b;
+		}
 	}
 }
 </style>

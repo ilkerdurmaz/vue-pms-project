@@ -1,5 +1,5 @@
 <script setup>
-	const props = defineProps(["task","users"]);
+const props = defineProps(["task", "users"]);
 </script>
 
 <template>
@@ -8,7 +8,7 @@
 			<span>{{ props.task }}</span>
 			<span>Tasks</span>
 		</div>
-		<div class="line"></div>
+		<div class="counter--line"></div>
 		<div class="counter--item">
 			<span>{{ props.users }}</span>
 			<span>Users</span>
@@ -50,10 +50,11 @@
 			color: #717986;
 		}
 	}
-}
-.line {
-	height: 42px;
-	width: 1px;
-	background: #cddcee;
+
+	.line {
+		height: 42px;
+		width: 1px;
+		background: #cddcee;
+	}
 }
 </style>

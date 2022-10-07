@@ -32,72 +32,73 @@ const icons = ref([
 </script>
 
 <template>
-	<div class="header_container">
-		<div class="header_top">
+	<div class="header">
+		<div class="header--top">
 			<div>
-				<h1 class="header_title">{{props.title}}</h1>
+				<h1 class="top--title">{{props.title}}</h1>
 			</div>
 			<SearchBar @search="searchTriggered" />
-			<div class="header_top_right">
-				<div class="icons_container">
+			<div class="top--right">
+				<div class="right--icons">
 					<Icon v-for="item in icons" :icon="item.name" />
 				</div>
 				<ProfileDetails />
 			</div>
 		</div>
-		<div class="header_bottom">
+		<div class="header--bottom">
 			<PlusButton @btnClick="plusButtonClick" />
 			<FilterTabs />
 		</div>
 	</div>
 </template>
 
-<style  lang="scss">
-.header_container {
+<style lang="scss">
+.header {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
 	padding: 32px 30px;
-}
 
-.header_bottom {
-	display: flex;
-	gap: 30px;
-}
-.header_top {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.header_title {
-	margin: 0;
-	width: 150px;
-	font : {
-		family: "Roboto";
-		style: normal;
-		weight: 500;
-		size: 24px;
-	}
-	line-height: 28px;
-	color: #3c557a;
-}
-.material-icons {
-		color: #717986;
+	&--top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.top--title {
+			margin: 0;
+			width: 150px;
+			line-height: 28px;
+			color: #3c557a;
+
+			font : {
+				family: "Roboto";
+				style: normal;
+				weight: 500;
+				size: 24px;
 			}
+		}
 
-.header_top_right {
-	display: flex;
-	justify-content: center;
-	margin: 0px 3.5rem 0px 0px;
-}
-.icons_container {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-	div {
-		height: 28px;
-		width: 28px;
+		.top--right {
+			display: flex;
+			justify-content: center;
+			margin: 0px 3.5rem 0px 0px;
+
+			.right--icons {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+			}
+		}
 	}
+
+	&--bottom {
+		display: flex;
+		gap: 30px;
+	}
+
 }
 
+.material-icons {
+	color: #717986;
+}
 </style>

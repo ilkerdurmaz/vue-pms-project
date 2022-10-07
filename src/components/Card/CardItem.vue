@@ -1,23 +1,23 @@
 <script setup>
-	import { ref } from "vue";
-	import Progress from "./Progress.vue";
-	import CardCounter from "./CardCounter.vue";
-	import Photo from "./Photo.vue";
-	import AddPhoto from "./AddPhoto.vue";
-	import CardStatus from "./CardStatus.vue";
-	import Icon from "../Icons/Icon.vue";
+import { ref } from "vue";
+import Progress from "./Progress.vue";
+import CardCounter from "./CardCounter.vue";
+import Photo from "./Photo.vue";
+import AddPhoto from "./AddPhoto.vue";
+import CardStatus from "./CardStatus.vue";
+import Icon from "../Icons/Icon.vue";
 
-	const addUser = () => {
-		console.log("Add Photo");
-	};
+const addUser = () => {
+	console.log("Add Photo");
+};
 
-	const props = defineProps(["data"])
+const props = defineProps(["data"])
 
-	const progress = ref(props.data.progress);
-	const task = ref(props.data.tasks);
-	const users = ref(props.data.members);
-	const status = ref(props.data.status);
-	const images = ref(props.data.image);
+const progress = ref(props.data.progress);
+const task = ref(props.data.tasks);
+const users = ref(props.data.members);
+const status = ref(props.data.status);
+const images = ref(props.data.image);
 
 </script>
 
@@ -43,7 +43,7 @@
 			</div>
 			<div class="body--info">
 				<div class="counter-group">
-					<CardCounter :task="task" :users="users" ></CardCounter>
+					<CardCounter :task="task" :users="users"></CardCounter>
 				</div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="card-footer">
-			<Progress :status="status" :value="progress" ></Progress>
+			<Progress :status="status" :value="progress"></Progress>
 		</div>
 	</div>
 </template>
@@ -73,8 +73,10 @@
 	&:hover {
 		box-shadow: 0px 3px 36px 12px #507ea91f;
 	}
+
 	&--head {
 		color: #8b8b8b;
+
 		.head--title {
 			color: #3c557a;
 			font-weight: 500;
@@ -82,13 +84,16 @@
 			line-height: 21.09px;
 			gap: 16px;
 		}
+
 		.head--icon {
 			display: flex;
+
 			:not(:last-child) {
 				margin-right: 12px;
 			}
 		}
 	}
+
 	&--body {
 		height: 73px;
 
@@ -122,16 +127,20 @@
 			}
 		}
 	}
-	.members--text {
-		font-weight: 500;
-		font-size: 13px;
-		line-height: 15px;
-		color: #717986;
-		padding-bottom: 12px;
-	}
-	.photos {
-		display: flex;
-		gap: 4px;
+
+	.members {
+		.members--text {
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 15px;
+			color: #717986;
+			padding-bottom: 12px;
+		}
+
+		.photos {
+			display: flex;
+			gap: 4px;
+		}
 	}
 }
 </style>
