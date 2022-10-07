@@ -1,31 +1,35 @@
 <script setup>
+	import { ref } from "vue";
 import Progress from "./Progress.vue";
 import CardCounter from "./CardCounter.vue";
 import Photo from "./Photo.vue";
 import AddPhoto from "./AddPhoto.vue";
 import CardStatus from "./CardStatus.vue";
-
-const images = [
-	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
-	"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
-	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
-	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
-	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
-	"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg",
-];
+import Icon from "../Icons/Icon.vue";
 
 const addUser = () => {
 	console.log("Add Photo");
 };
+
+const props = defineProps(["data"])
+
+const progress = ref(props.data.progress);
+const task = ref(props.data.tasks);
+const users = ref(props.data.members);
+const status = ref(props.data.status);
+const images = ref(props.data.image);
+
+console.log(props.data)
+
 </script>
 <template>
 	<div class="card flex justify-between flex-column">
 		<div class="card--head flex flex-column">
 			<div class="flex flex-row justify-between">
-				<p class="head--title">Project Title goes here</p>
+				<p class="head--title">{{props.data.title}}</p>
 				<div class="head--icon">
-					<span class="material-symbols-outlined"> edit </span>
-					<span class="material-symbols-outlined"> more_vert </span>
+					<Icon icon="edit" />
+					<Icon icon="more_vert " />
 				</div>
 			</div>
 			
@@ -33,15 +37,15 @@ const addUser = () => {
 		<div class="card--body flex flex-row justify-between items-center">
 			<div class="body--date flex flex-column">
 				<p class="date--text">Start date</p>
-				<p class="date--format">12 Sep 2021</p>
+				<p class="date--format">{{props.data.date}}</p>
 			</div>
 			<div class="body--status">
 				<p class="status--text">Status</p>
-				<CardStatus status="Active"></CardStatus>
+				<CardStatus :status="status"></CardStatus>
 			</div>
 			<div class="body--info">
 				<div class="counter-group">
-					<CardCounter :data="[14, 4]"></CardCounter>
+					<CardCounter :task="task" :users="users" ></CardCounter>
 				</div>
 			</div>
 		</div>
@@ -53,7 +57,7 @@ const addUser = () => {
 			</div>
 		</div>
 		<div class="card-footer">
-			<Progress></Progress>
+			<Progress :value="progress" ></Progress>
 		</div>
 	</div>
 </template>
@@ -84,12 +88,9 @@ const addUser = () => {
 		}
 
 		.head--icon {
+			display: flex;
 			:not(:last-child) {
 				margin-right: 12px;
-			}
-
-			&>span {
-				cursor: pointer;
 			}
 		}
 	}

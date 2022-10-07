@@ -1,0 +1,134 @@
+
+[
+	{
+		"title" : "Proje 1",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
+		],
+		"date" : "2021-05-01",
+		"status" : "Active",
+		"progress" : "50",
+		"tasks" : "10",
+		"members" : "3"
+	},
+	{
+		"title" : "Proje 2",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg"
+		],
+		"date" : "2021-06-01",
+		"status" : "OnHold",
+		"progress" : "70",
+		"tasks" : "15",
+		"members" : "4"
+	},
+	{
+		"title" : "Proje 3",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg"
+		],
+		"date" : "2021-08-01",
+		"status" : "Inactive",
+		"progress" : "10",
+		"tasks" : "2",
+		"members" : "5"
+	},
+	{
+		"title" : "Proje 4",
+		"image" : [
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg"
+		],
+		"date" : "2022-01-01",
+		"status" : "Active",
+		"progress" : "99",
+		"tasks" : "19",
+		"members" : "4"
+	},
+	{
+		"title" : "Proje 5",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
+		],
+		"date" : "2022-02-01",
+		"status" : "OnHold",
+		"progress" : "80",
+		"tasks" : "15",
+		"members" : "6"
+	},
+	{
+		"title" : "Proje 6",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg"
+		],
+		"date" : "2022-03-01",
+		"status" : "Inactive",
+		"progress" : "20",
+		"tasks" : "5",
+		"members" : "4"
+	},
+	{
+		"title" : "Proje 7",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg",
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg"
+		],
+		"date" : "2022-04-01",
+		"status" : "Active",
+		"progress" : "85",
+		"tasks" : "18",
+		"members" : "5"
+	},
+	{
+		"title" : "Proje 8",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
+		],
+		"date" : "2022-05-01",
+		"status" : "Inactive",
+		"progress" : "65",
+		"tasks" : "13",
+		"members" : "4"
+	},
+	{
+		"title" : "Proje 9",
+		"image" : [
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
+			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/fatih.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
+			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
+		],
+		"date" : "2022-03-01",
+		"status" : "Active",
+		"progress" : "100",
+		"tasks" : "99",
+		"members" : "6"
+	}
+]

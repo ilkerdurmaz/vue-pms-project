@@ -1,5 +1,5 @@
 <script setup>
-import Icons from "../Icons/Icons.vue";
+import Icon from "../Icons/Icon.vue";
 
 const props = defineProps(["icon","title"]);
 
@@ -11,7 +11,7 @@ const logOut = () => {
 
 <template>
 	<div class="sidebarItem" :class="{'logOut' : logOut()}">
-		<Icons :icon="props.icon" />
+		<Icon :icon="props.icon" />
 		<span class="sidebarItem__text">{{ props.title }}</span>
 	</div>
 </template>

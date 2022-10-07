@@ -3,7 +3,7 @@ import { ref } from "vue";
 import SidebarItem from "./sidebarItem.vue";
 import SideBarData from "../..//assets/data/SidebarData.json";
 import Logo from "./Logo.vue";
-import Icons from "../Icons/Icons.vue";
+import Icon from "../Icons/Icon.vue";
 
 const icons = ref(SideBarData);
 
@@ -26,7 +26,7 @@ const ToggleMenu = () => {
 				<Logo/>
 				<div class="menu-toggle-wrap">
 					<button class="menu-toggle" @click="ToggleMenu">
-						<Icons icon="menu_open" />
+						<Icon icon="menu_open" />
 					</button>
 				</div>
 			</div>

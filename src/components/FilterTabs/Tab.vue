@@ -20,9 +20,11 @@ defineProps({
 
 <style scoped>
 .tab {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;

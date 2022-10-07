@@ -3,6 +3,8 @@ import FilterTabs from "../FilterTabs/FilterTabs.vue";
 import PlusButton from "./PlusButton.vue";
 import SearchBar from "./SearchBar.vue";
 import ProfileDetails from "./ProfileDetails.vue";
+import Icon from "../Icons/Icon.vue";
+import { ref } from "vue";
 
 function searchTriggered(value) {
 	console.log("Search value: " + value);
@@ -11,6 +13,19 @@ function plusButtonClick() {
 	console.log("PlusButton Clicked");
 	return;
 }
+
+const icons = ref([
+	{
+		name: "comment",
+	},
+	{
+		name: "notifications",
+	},
+	{
+		name: "settings",
+	},
+]);
+
 </script>
 
 <template>
@@ -22,9 +37,7 @@ function plusButtonClick() {
 			<SearchBar @search="searchTriggered" />
 			<div class="header_top_right">
 				<div class="icons_container">
-					<div class="iconumsu"></div>
-					<div class="iconumsu"></div>
-					<div class="iconumsu"></div>
+					<Icon v-for="item in icons" :icon="item.name" />
 				</div>
 				<ProfileDetails />
 			</div>
@@ -36,7 +49,7 @@ function plusButtonClick() {
 	</div>
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .header_container {
 	display: flex;
 	flex-direction: column;
@@ -64,12 +77,14 @@ function plusButtonClick() {
 	line-height: 28px;
 	color: #3c557a;
 }
+.material-icons {
+		color: #717986;
+			}
 
 .header_top_right {
 	display: flex;
 	justify-content: center;
 }
-
 .icons_container {
 	display: flex;
 	align-items: center;
@@ -77,7 +92,7 @@ function plusButtonClick() {
 	div {
 		height: 28px;
 		width: 28px;
-		background-color: red;
 	}
 }
+
 </style>

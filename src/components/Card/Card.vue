@@ -1,10 +1,10 @@
 <script setup>
 import CardItem from './CardItem.vue';
-
+	import ProjectData from "../../assets/data/ProjectData.json";
 </script>
 <template>
 	<div class="card--container">
-		<CardItem v-for="i in 9" />
+		<CardItem v-for=" data in ProjectData " :data="data" />
 	</div>
 </template>
 <style lang="scss">

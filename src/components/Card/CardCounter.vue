@@ -1,16 +1,16 @@
 <script setup>
-const props = defineProps(["data"]);
+const props = defineProps(["task","users"]);
 </script>
 
 <template>
 	<div class="counter">
 		<div class="counter--item">
-			<span>{{ props.data[0] }}</span>
+			<span>{{ props.task }}</span>
 			<span>Tasks</span>
 		</div>
 		<div class="line"></div>
 		<div class="counter--item">
-			<span>{{ props.data[1] }}</span>
+			<span>{{ props.users }}</span>
 			<span>Users</span>
 		</div>
 	</div>

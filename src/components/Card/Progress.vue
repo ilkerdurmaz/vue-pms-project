@@ -12,7 +12,7 @@ const props = defineProps(["value"])
 </template>
 <style lang="scss">
 .progress {
-	width: 447px;
+	width: 100%;
 
 	&--head {
 		color: #717986;
@@ -32,11 +32,9 @@ const props = defineProps(["value"])
 	}
 
 }
-
-
 progress {
 	border-radius: 7px;
-	width: 447px;
+	width: 100%;
 	height: 8px;
 }
 

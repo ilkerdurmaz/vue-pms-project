@@ -69,6 +69,8 @@ function sortClick() {
 }
 .tabs {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 3rem;
 	margin: 0 1.25rem;
 }
