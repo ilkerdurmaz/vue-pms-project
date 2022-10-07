@@ -28,7 +28,7 @@ const addUser = () => {
 					<span class="material-symbols-outlined"> more_vert </span>
 				</div>
 			</div>
-			<div style="font-size: 13px; color: #00db99">status gelecek</div>
+			
 		</div>
 		<div class="card--body flex flex-row justify-between items-center">
 			<div class="body--date flex flex-column">
