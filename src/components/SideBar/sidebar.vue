@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import SidebarItem from "./sidebarItem.vue";
+import SidebarItem from "./SidebarItem.vue";
 import SideBarData from "../..//assets/data/SidebarData.json";
 import Logo from "./Logo.vue";
 import Icon from "../Icons/Icon.vue";
@@ -121,7 +121,7 @@ const ToggleMenu = () => {
 	&.is-expanded {
 		width: 80px;
 
-		.header {
+		.logo {
 			visibility: hidden;
 		}
 

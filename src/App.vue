@@ -1,5 +1,5 @@
 <script setup>
-	import Sidebar from './components/SideBar/sidebar.vue'
+	import Sidebar from './components/SideBar/Sidebar.vue'
 	import Header from './components/Header/Header.vue';
 	import Card from "./components/Card/Card.vue";
 	import { ref } from 'vue';
