@@ -1,12 +1,26 @@
-<script setup></script>
+<script setup>
+defineProps({
+	name: {
+		type: String,
+		default: "Tolga Eğilmezel",
+	},
+	mail: {
+		type: String,
+		default: "tolga.egilmezel@gmail.com",
+	},
+	imgSrc: {
+		type: String,
+		default:
+			"https://media-exp1.licdn.com/dms/image/C5603AQGzQpv7w1G4eA/profile-displayphoto-shrink_200_200/0/1517785162616?e=2147483647&v=beta&t=MyO0L5FN0NNYzo0yGW3lvP3GIuehvTxemFBzzYB555U",
+	},
+});
+</script>
 <template>
 	<div class="profile_details">
-		<img
-			src="https://media-exp1.licdn.com/dms/image/C5603AQGzQpv7w1G4eA/profile-displayphoto-shrink_200_200/0/1517785162616?e=2147483647&v=beta&t=MyO0L5FN0NNYzo0yGW3lvP3GIuehvTxemFBzzYB555U"
-		/>
+		<img :src="imgSrc" />
 		<div class="name_group">
-			<h4>Tolga Eğilmezel</h4>
-			<p>tolga.egilmezel@gmail.com</p>
+			<h4>{{ name }}</h4>
+			<p>{{ mail }}</p>
 		</div>
 	</div>
 </template>
