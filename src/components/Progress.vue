@@ -1,13 +1,13 @@
 <script setup>
-
+const props = defineProps(["value"])
 </script>
 <template>
 	<div class="progress">
 		<div class="progress--head flex justify-between">
 			<p class="progress--title">Progress</p>
-			<p class="progress--value">%32</p>
+			<p class="progress--value">{{ value }}</p>
 		</div>
-		<progress id="file" value="32" max="100"> 32% </progress>
+		<progress id="file" :value="value" max="100"> {{ value }} </progress>
 	</div>
 </template>
 <style lang="scss">
@@ -24,7 +24,7 @@
 		font-weight: 500;
 	}
 
-	&--value{
+	&--value {
 		font-size: 12px;
 		line-height: 14.06px;
 		font-weight: 400;
