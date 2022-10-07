@@ -1,12 +1,14 @@
 <script setup>
-const props = defineProps(["status"]);
+	const props = defineProps(["status"]);
 </script>
+
 <template>
 	<div class="status">
 		<span :class="'disc--' + props.status" class="disc"></span>
 		<p :class="'status--' + props.status">{{ props.status }}</p>
 	</div>
 </template>
+
 <style lang="scss">
 .disc {
 	display: block;
@@ -22,6 +24,9 @@ const props = defineProps(["status"]);
 	}
 	&--Inactive {
 		background: #ff285c;
+	}
+	&--Completed {
+		background: #0066b2;
 	}
 }
 .status {
@@ -40,6 +45,9 @@ const props = defineProps(["status"]);
 	}
 	&--Inactive {
 		color: #ff285c;
+	}
+	&--Completed {
+		color: #0066b2;
 	}
 }
 </style>

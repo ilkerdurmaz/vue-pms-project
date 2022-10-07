@@ -58,7 +58,7 @@
 		
 	},
 	{
-		"title" : "Proje 6",
+		"title" : "Proje 5",
 		"image" : [
 			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/esra.jpg",
@@ -72,7 +72,7 @@
 		"members" : "4"
 	},
 	{
-		"title" : "Proje 5",
+		"title" : "Proje 6",
 		"image" : [
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/abdullah.jpg",
 			"https://user-images.githubusercontent.com/72731296/194396349-84056f61-5e01-48af-9516-1cd88e90d5bb.png",
@@ -81,11 +81,12 @@
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
 		],
-		"date" : "2022-02-01",
-		"status" : "OnHold",
-		"progress" : "80",
-		"tasks" : "15",
+		"date" : "2022-03-01",
+		"status" : "Completed",
+		"progress" : "100",
+		"tasks" : "99",
 		"members" : "6"
+		
 	},
 	{
 		"title" : "Proje 7",
@@ -126,10 +127,10 @@
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/ilker.jpg",
 			"https://raw.githubusercontent.com/Front-End-Bootcamp/vue-dashboard-team-earth-1/develop/src/assets/img/irina.jpg"
 		],
-		"date" : "2022-03-01",
-		"status" : "Active",
-		"progress" : "100",
-		"tasks" : "99",
+		"date" : "2022-02-01",
+		"status" : "OnHold",
+		"progress" : "80",
+		"tasks" : "15",
 		"members" : "6"
 	}
 ]

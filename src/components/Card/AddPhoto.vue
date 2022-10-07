@@ -1,9 +1,10 @@
 <script setup>
-const emit = defineEmits(["setUser"]);
+	const emit = defineEmits(["setUser"]);
 
-const clickHandler = () => {
-	emit("setUser");
-};
+	const clickHandler = () => {
+		emit("setUser");
+	};
+
 </script>
 
 <template>

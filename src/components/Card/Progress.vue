@@ -61,5 +61,10 @@ progress{
 		border-radius: 75px;
 	}
 
+	&.Completed::-webkit-progress-value {
+		background-color: #0066B2;
+		border-radius: 75px;
+	}
+
 }
 </style>

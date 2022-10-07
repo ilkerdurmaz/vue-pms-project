@@ -10,6 +10,7 @@ const props = defineProps(["title"]);
 
 function searchTriggered(value) {
 	console.log("Search value: " + value);
+	return
 }
 function plusButtonClick() {
 	console.log("PlusButton Clicked");
@@ -87,6 +88,7 @@ const icons = ref([
 .header_top_right {
 	display: flex;
 	justify-content: center;
+	margin: 0px 3.5rem 0px 0px;
 }
 .icons_container {
 	display: flex;

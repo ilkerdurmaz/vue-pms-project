@@ -1,14 +1,15 @@
 <script setup>
-import CardItem from './CardItem.vue';
+	import CardItem from './CardItem.vue';
 	import ProjectData from "../../assets/data/ProjectData.json";
 </script>
+
 <template>
 	<div class="card--container">
 		<CardItem v-for=" data in ProjectData " :data="data" />
 	</div>
 </template>
-<style lang="scss">
 
+<style lang="scss">
 	.card--container {
 		width: 100%;
 		display: grid;

@@ -1,25 +1,26 @@
 <script setup>
 	import { ref } from "vue";
-import Progress from "./Progress.vue";
-import CardCounter from "./CardCounter.vue";
-import Photo from "./Photo.vue";
-import AddPhoto from "./AddPhoto.vue";
-import CardStatus from "./CardStatus.vue";
-import Icon from "../Icons/Icon.vue";
+	import Progress from "./Progress.vue";
+	import CardCounter from "./CardCounter.vue";
+	import Photo from "./Photo.vue";
+	import AddPhoto from "./AddPhoto.vue";
+	import CardStatus from "./CardStatus.vue";
+	import Icon from "../Icons/Icon.vue";
 
-const addUser = () => {
-	console.log("Add Photo");
-};
+	const addUser = () => {
+		console.log("Add Photo");
+	};
 
-const props = defineProps(["data"])
+	const props = defineProps(["data"])
 
-const progress = ref(props.data.progress);
-const task = ref(props.data.tasks);
-const users = ref(props.data.members);
-const status = ref(props.data.status);
-const images = ref(props.data.image);
+	const progress = ref(props.data.progress);
+	const task = ref(props.data.tasks);
+	const users = ref(props.data.members);
+	const status = ref(props.data.status);
+	const images = ref(props.data.image);
 
 </script>
+
 <template>
 	<div class="card flex justify-between flex-column">
 		<div class="card--head flex flex-column">
@@ -30,7 +31,6 @@ const images = ref(props.data.image);
 					<Icon icon="more_vert " />
 				</div>
 			</div>
-			
 		</div>
 		<div class="card--body flex flex-row justify-between items-center">
 			<div class="body--date flex flex-column">
@@ -73,10 +73,8 @@ const images = ref(props.data.image);
 	&:hover {
 		box-shadow: 0px 3px 36px 12px #507ea91f;
 	}
-
 	&--head {
 		color: #8b8b8b;
-
 		.head--title {
 			color: #3c557a;
 			font-weight: 500;
@@ -84,7 +82,6 @@ const images = ref(props.data.image);
 			line-height: 21.09px;
 			gap: 16px;
 		}
-
 		.head--icon {
 			display: flex;
 			:not(:last-child) {
@@ -92,7 +89,6 @@ const images = ref(props.data.image);
 			}
 		}
 	}
-
 	&--body {
 		height: 73px;
 

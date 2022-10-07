@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
 		<div class="header">
 			<div class="header__svg">
@@ -17,26 +13,20 @@
 </template>
 
 <style lang="scss" scoped>
-
-
 			.header{
 				width:100%;
 				display: flex;
 				align-items: center;
 				padding-left:8px ;
-			
 			&__svg{
 			margin-right: 18px;
 			position: relative;
-			
 		}
-		
 		&__circle{
 			position: absolute;
 			top: 15px;
 			left: 15px;
 		}
-		
 			&__text{
 				font-style: normal;
 				font-weight: 700;
@@ -45,7 +35,6 @@
 				margin-left: 10px;
 				color: black;
 				}
-
 		}
 
 

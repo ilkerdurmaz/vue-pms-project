@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["task","users"]);
+	const props = defineProps(["task","users"]);
 </script>
 
 <template>

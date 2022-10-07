@@ -1,11 +1,11 @@
 <script setup>
-const emit = defineEmits(["search"]);
+	const emit = defineEmits(["search"]);
 
-function keyupHandler(e) {
-	emit("search", e.target.value);
-	e.target.value = "";
-	return;
-}
+	function keyupHandler(e) {
+		emit("search", e.target.value);
+		e.target.value = "";
+		return;
+	}
 </script>
 
 <template>

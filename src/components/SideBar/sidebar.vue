@@ -6,8 +6,9 @@ import Logo from "./Logo.vue";
 import Icon from "../Icons/Icon.vue";
 
 const iconData = ref(SideBarData);
-const emits = defineEmits(["setTitle"])
+const is_expanded = ref(false);
 
+const emits = defineEmits(["setTitle"])
 
 const clickHandler = (title) => {
 	emits("setTitle", title)
@@ -19,14 +20,14 @@ const isActive = (id) => {
 	});
 }
 
-const is_expanded = ref(false);
-
 const ToggleMenu = () => {
 	return is_expanded.value = !is_expanded.value;
 };
+
 </script>
 
 <template>
+	
 	<div class="sidebar">
 		<aside class="aside" :class="`${is_expanded && 'is-expanded'}`">
 			<div class="aside__header">
@@ -66,7 +67,6 @@ const ToggleMenu = () => {
 	height: 100vh;
 
 }
-
 .aside {
 	display: flex;
 	flex-direction: column;
@@ -76,7 +76,6 @@ const ToggleMenu = () => {
 	transition: 0.2s ease-out;
 	border-right: 1px solid #F1F2F7;
 	position: relative;
-
 	&__header{
 		display: flex;
 		align-items: center;
@@ -84,12 +83,10 @@ const ToggleMenu = () => {
 		position: relative;
 		padding: 44px 18px 0px 40px;
 	}
-
 	.menu-toggle-wrap {
 			position: absolute;
 			right: 21.67px;
 			transition: 0.2s ease-out;
-
 			.menu-toggle {
 				.material-icons {
 					font-size: 1.5rem;
