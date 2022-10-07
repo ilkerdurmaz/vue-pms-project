@@ -1,5 +1,5 @@
 <script setup>
-import Progress from "../Progress.vue";
+import Progress from "./Progress.vue";
 import CardCounter from "./CardCounter.vue";
 import Photo from "./Photo.vue";
 import AddPhoto from "./AddPhoto.vue";
@@ -61,12 +61,12 @@ const addUser = () => {
 <style lang="scss">
 .card {
 	box-sizing: border-box;
-	width: 495px;
 	height: 300px;
 	padding: 24px;
 	background: #ffffff;
 	border: 1px solid #e5e5e5;
 	border-radius: 8px;
+	margin: 0px 20px 30px 0px;
 
 	&:hover {
 		box-shadow: 0px 3px 36px 12px #507ea91f;

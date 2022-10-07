@@ -1,0 +1,26 @@
+[
+	{
+		"name": "home",
+		"text": "Dashboard"
+	},
+	{
+		"name": "grid_view",
+		"text": "Projects"
+	},
+	{
+		"name": "schema",
+		"text": "Modules"
+	},
+	{
+		"name": "send",
+		"text": "Sprint"
+	},
+	{
+		"name": "group",
+		"text": "Members"
+	},
+	{
+		"name": "browser_updated",
+		"text": "Reports"
+	}
+]

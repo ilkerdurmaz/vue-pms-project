@@ -1,38 +1,15 @@
 <script setup>
 import { ref } from "vue";
 import SidebarItem from "./sidebarItem.vue";
-import Logo from "../../assets/svg/SideBarSvg/Logo.vue";
-import LogOut from "../../assets/svg/SideBarSvg/LogOut.vue";
+import SideBarData from "../..//assets/data/SidebarData.json";
+import Logo from "./Logo.vue";
+import Icons from "../Icons/Icons.vue";
 
-const items = ref([
-	{
-		icon: "home",
-		title: "Dashboard",
-	},
-	{
-		icon: "grid_view",
-		title: "Projects",
-	},
-	{
-		icon: "schema",
-		title: "Modules",
-	},
-	{
-		icon: "send",
-		title: "Sprint",
-	},
-	{
-		icon: "group",
-		title: "Members",
-	},
-	{
-		icon: "browser_updated",
-		title: "Reports",
-	},
-]);
+const icons = ref(SideBarData);
 
 const clickHandler = (value) => {
 	console.log(value);
+	
 };
 
 const is_expanded = ref(false);
@@ -43,96 +20,118 @@ const ToggleMenu = () => {
 </script>
 
 <template>
-	<aside :class="`${is_expanded && 'is-expanded'}`">
-		<div class="menu-toggle-wrap">
-			<button class="menu-toggle" @click="ToggleMenu">
-				<span class="material-icons">menu_open</span>
-			</button>
-		</div>
-		<div class="logo">
-			<Logo></Logo>
-		</div>
-
-		<div class="menu">
-			<SidebarItem
-				v-for="item in items"
-				:icon="item.icon"
-				:title="item.title"
-				@click="clickHandler(item.title)"
-			>
-			</SidebarItem>
-		</div>
-
-		<div class="flex"></div>
-
-		<div class="logOut">
-			<LogOut></LogOut>
-		</div>
-	</aside>
+	<div class="sidebar">
+		<aside class="aside" :class="`${is_expanded && 'is-expanded'}`">
+			<div class="aside__header">
+				<Logo/>
+				<div class="menu-toggle-wrap">
+					<button class="menu-toggle" @click="ToggleMenu">
+						<Icons icon="menu_open" />
+					</button>
+				</div>
+			</div>
+			<div class="aside__content">
+				<SidebarItem
+					v-for="item in icons"
+					:key="item.text"
+					:icon ="item.name"
+					:title="item.text"
+					@click="clickHandler(item.text)">
+				</SidebarItem>
+			</div>
+			<div class="aside__footer">
+				<SidebarItem :icon="'logout'" :title="'LogOut'" />
+			</div> 
+		</aside>
+	</div>
 </template>
 
-<style lang="scss" scoped>
-aside {
+<style lang="scss" >
+
+.sidebar{
 	display: flex;
 	flex-direction: column;
-	width: calc(1rem + 37px);
+	min-height: 100vh;
+	height: 100vh;
+
+}
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	width: 315px;
 	min-height: 100vh;
 	overflow: hidden;
-	padding: 1rem;
-
-	background-color: var(--light);
-	color: var(--dark-alt);
-
 	transition: 0.2s ease-out;
+	border-right: 1px solid #F1F2F7;
+	position: relative;
 
-	.flex {
-		flex: 1 1 0;
-	}
-
-	.logOut {
-		margin-bottom: 2rem;
+	&__header{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+		padding: 44px 18px 0px 40px;
 	}
 
 	.menu-toggle-wrap {
-		display: flex;
-		justify-content: flex-end;
-		margin-bottom: 1rem;
-
-		position: relative;
-		top: 0;
-		transition: 0.2s ease-out;
-
-		.menu-toggle {
+			position: absolute;
+			right: 21.67px;
 			transition: 0.2s ease-out;
 
-			.material-icons {
-				font-size: 1.5rem;
-				color: var(--dark-alt);
-			}
-		}
-	}
-
-	.menu {
-		margin: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 38px;
-	}
-
-	&.is-expanded {
-		width: var(--sidebar-width);
-
-		.menu-toggle-wrap {
-			top: 1rem;
 			.menu-toggle {
-				transform: rotate(0deg);
+				.material-icons {
+					font-size: 1.5rem;
+					color: #717986;
+				}
+				&:hover {
+					.material-icons {
+						color: #717986;
+						
+					}
+				}
+			}
+		}
+		&__content {
+			width: 315px;
+			height: 90vh;
+			padding: 47px 0 0 0;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			
+		}
+		&__footer {
+			width: 315px;
+			border-top: 1px solid #F1F2F7;
+			position: fixed;
+			bottom: 5px;
+			height: 150px;
+			padding-top:20px ;
+		}
+		&.is-expanded {
+			width: 80px;
+			.header{
+				visibility: hidden;
+			}
+			.menu-toggle-wrap {
+				left: 38px;
+			}
+			.aside__footer {
+				width: 80px;
+				position: relative;
+				bottom: 0;
+			}
+			.sidebarItem{
+				width: 50px;
+				padding: 16px 0 17px 13px;
+				&__text {
+					opacity: 6;
+				}
+			}
+			.material-icons {
+				margin-right: 1rem;
 			}
 		}
 	}
-
-	@media (max-widht: 768px) {
-		position: fixed;
-		z-index: 99;
-	}
-}
 </style>
