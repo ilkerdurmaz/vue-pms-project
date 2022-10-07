@@ -5,17 +5,24 @@ import SideBarData from "../..//assets/data/SidebarData.json";
 import Logo from "./Logo.vue";
 import Icon from "../Icons/Icon.vue";
 
-const icons = ref(SideBarData);
+const iconData = ref(SideBarData);
+const emits = defineEmits(["setTitle"])
 
-const clickHandler = (value) => {
-	console.log(value);
-	
+
+const clickHandler = (title) => {
+	emits("setTitle", title)
 };
+
+const isActive = (id) => {
+	iconData.value.map((item) => {
+	return item.id === id ? (item.active = true) : (item.active = false);
+	});
+}
 
 const is_expanded = ref(false);
 
 const ToggleMenu = () => {
-	is_expanded.value = !is_expanded.value;
+	return is_expanded.value = !is_expanded.value;
 };
 </script>
 
@@ -32,11 +39,15 @@ const ToggleMenu = () => {
 			</div>
 			<div class="aside__content">
 				<SidebarItem
-					v-for="item in icons"
-					:key="item.text"
+					v-for="item in iconData"
+					:key="item.id"
 					:icon ="item.name"
 					:title="item.text"
-					@click="clickHandler(item.text)">
+					:id  ="item.id"
+					:active = "item.active"
+					@click="clickHandler(item.text)"
+					@setID="isActive"
+					>
 				</SidebarItem>
 			</div>
 			<div class="aside__footer">

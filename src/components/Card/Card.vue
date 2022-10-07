@@ -15,15 +15,13 @@ import CardItem from './CardItem.vue';
 		grid-template-columns: repeat(3, 1fr);
 		padding: 0px 0px 0px 30px;
 
-		@media (max-width: 1450px) {
+		@media (max-width: 1500px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media (max-width: 480px) {
+		@media (max-width: 1000px) {
 			grid-template-columns: repeat(1, 1fr);
 		}
-
-
 
 	}
 </style>

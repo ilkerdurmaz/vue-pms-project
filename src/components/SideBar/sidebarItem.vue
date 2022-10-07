@@ -1,16 +1,22 @@
 <script setup>
+import { ref } from "vue";
 import Icon from "../Icons/Icon.vue";
 
-const props = defineProps(["icon","title"]);
+const props = defineProps(["icon","title","id","active"]);
+const emits = defineEmits(["setID"])
 
 const logOut = () => {
 		return props.title === "LogOut" ? true : false;
 	}
 
+const clickHandler = (id) => {
+		emits("setID",id)
+	}
+
 </script>
 
 <template>
-	<div class="sidebarItem" :class="{'logOut' : logOut()}">
+	<div class="sidebarItem" :class="{'logOut' : logOut()},{'active' : props.active}" @click="clickHandler(props.id)">
 		<Icon :icon="props.icon" />
 		<span class="sidebarItem__text">{{ props.title }}</span>
 	</div>
@@ -39,8 +45,10 @@ const logOut = () => {
 		}
 		&:hover {
 			background-color: #F9F9F9;
-			color: #00DB99;
-				.sidebarItem__text{
+			.material-icons {
+				color: #00DB99;
+			}
+			.sidebarItem__text {
 				color: #00DB99;
 			}
 		}
@@ -54,5 +62,16 @@ const logOut = () => {
 		&:hover {
 			background-color: #fff;
 			}
-		}}
+		}
+		
+	&.active{
+		background-color: #F9F9F9;
+		.material-icons {
+			color: #00DB99;
+		}
+		.sidebarItem__text {
+			color: #00DB99;
+		}
+	}
+		}
 </style>

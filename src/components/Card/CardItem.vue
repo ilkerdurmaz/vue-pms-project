@@ -19,8 +19,6 @@ const users = ref(props.data.members);
 const status = ref(props.data.status);
 const images = ref(props.data.image);
 
-console.log(props.data)
-
 </script>
 <template>
 	<div class="card flex justify-between flex-column">
@@ -57,7 +55,7 @@ console.log(props.data)
 			</div>
 		</div>
 		<div class="card-footer">
-			<Progress :value="progress" ></Progress>
+			<Progress :status="status" :value="progress" ></Progress>
 		</div>
 	</div>
 </template>

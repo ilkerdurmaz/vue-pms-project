@@ -11,7 +11,6 @@
 	<div class="icon" >
 		<span class="material-icons">{{props.icon}}</span>
 		<span v-if="isNotification()" class="notifications"></span>
-
 	</div>
 </template>
 

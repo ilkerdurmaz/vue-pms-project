@@ -1,26 +1,43 @@
 [
 	{
+		"id" : "1",
 		"name": "home",
-		"text": "Dashboard"
+		"text": "Dashboard",
+		"active": false
 	},
 	{
+		"id" : "2",
 		"name": "grid_view",
-		"text": "Projects"
+		"text": "Projects",
+		"active": true
+
 	},
 	{
+		"id" : "3",
 		"name": "schema",
-		"text": "Modules"
+		"text": "Modules",
+		"active": false
+
 	},
 	{
+		"id" : "4",
 		"name": "send",
-		"text": "Sprint"
+		"text": "Sprint",
+		"active": false
+
 	},
 	{
+		"id" : "5",
 		"name": "group",
-		"text": "Members"
+		"text": "Members",
+		"active": false
+
 	},
 	{
+		"id" : "6",
 		"name": "browser_updated",
-		"text": "Reports"
+		"text": "Reports",
+		"active": false
+
 	}
 ]

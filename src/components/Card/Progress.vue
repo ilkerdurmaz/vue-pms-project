@@ -1,5 +1,6 @@
 <script setup>
-const props = defineProps(["value"])
+const props = defineProps(["value","status"])
+
 </script>
 <template>
 	<div class="progress">
@@ -7,7 +8,7 @@ const props = defineProps(["value"])
 			<p class="progress--title">Progress</p>
 			<p class="progress--value">{{ value }}</p>
 		</div>
-		<progress id="file" :value="value" max="100"> {{ value }} </progress>
+		<progress :class="props.status" id="file" :value="value" max="100"> {{ value }} </progress>
 	</div>
 </template>
 <style lang="scss">
@@ -43,8 +44,22 @@ progress::-webkit-progress-bar {
 	border-radius: 75px;
 }
 
-progress::-webkit-progress-value {
-	background-color: #1BE3A7;
-	border-radius: 75px;
+progress{
+
+	&.Active::-webkit-progress-value {
+		background-color: #00DB99;
+		border-radius: 75px;
+	}
+
+	&.OnHold::-webkit-progress-value {
+		background-color: #F0BB00;
+		border-radius: 75px;
+	}
+
+	&.Inactive::-webkit-progress-value {
+		background-color: #FF285C;
+		border-radius: 75px;
+	}
+
 }
 </style>

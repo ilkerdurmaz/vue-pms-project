@@ -2,13 +2,21 @@
 	import Sidebar from './components/SideBar/sidebar.vue'
 	import Header from './components/Header/Header.vue';
 	import Card from "./components/Card/Card.vue";
+import { ref } from 'vue';
+
+	const title = ref("Projects");
+
+	const setTitle = (value) => {
+		title.value = value;
+	};
+
 </script>
 	
 	<template>
 			<div class="main">
-				 <Sidebar />
+				 <Sidebar @setTitle="setTitle" />
 				<div class="main__content">
-					<Header/>
+					<Header :title="title" />
 					<Card/>
 				</div>
 			</div>

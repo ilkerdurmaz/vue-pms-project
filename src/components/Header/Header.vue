@@ -6,6 +6,8 @@ import ProfileDetails from "./ProfileDetails.vue";
 import Icon from "../Icons/Icon.vue";
 import { ref } from "vue";
 
+const props = defineProps(["title"]);
+
 function searchTriggered(value) {
 	console.log("Search value: " + value);
 }
@@ -32,7 +34,7 @@ const icons = ref([
 	<div class="header_container">
 		<div class="header_top">
 			<div>
-				<h1 class="header_title">Projects</h1>
+				<h1 class="header_title">{{props.title}}</h1>
 			</div>
 			<SearchBar @search="searchTriggered" />
 			<div class="header_top_right">
@@ -68,6 +70,7 @@ const icons = ref([
 }
 .header_title {
 	margin: 0;
+	width: 150px;
 	font : {
 		family: "Roboto";
 		style: normal;
