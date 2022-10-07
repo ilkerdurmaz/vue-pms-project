@@ -27,6 +27,7 @@ const titles = ref([
 ]);
 
 function selectTab(value) {
+	console.log(value + " tab selected.");
 	titles.value = titles.value.map((item) =>
 		item.name === value ? { ...item, active: true } : { ...item, active: false }
 	);
@@ -35,7 +36,8 @@ function selectTab(value) {
 }
 
 function sortClick() {
-	console.log("sort button clicked");
+	console.log("SortButton clicked");
+	return;
 }
 </script>
 

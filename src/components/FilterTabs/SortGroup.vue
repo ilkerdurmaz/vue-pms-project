@@ -2,6 +2,7 @@
 const emit = defineEmits(["sortClick"]);
 function clickHandler() {
 	emit("sortClick");
+	return;
 }
 </script>
 

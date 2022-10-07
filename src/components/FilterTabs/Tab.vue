@@ -31,6 +31,9 @@ defineProps({
 	margin: auto 0 1.125rem 0;
 	cursor: pointer;
 }
+.tab:hover {
+	color: #25364f;
+}
 .dot {
 	width: 4px;
 	height: 4px;
@@ -38,7 +41,6 @@ defineProps({
 	border-radius: 50%;
 	margin-bottom: 2px;
 }
-
 .active {
 	font-weight: 700;
 	color: #25364f;
