@@ -2,7 +2,7 @@
 
 This is a web application that demonstrates a project management system dashboard panel.
 
-![projectGIF](https://user-images.githubusercontent.com/14932895/194628705-1fb0256d-70c2-4ee7-8846-273a8bb724b6.gif)
+![projectGIF](https://user-images.githubusercontent.com/14932895/194633923-a4f4cb1b-e032-4623-93da-9bb5039ae9ba.gif)
 
 ## [DEMO](https://earthlings-pms.netlify.app/)
 
