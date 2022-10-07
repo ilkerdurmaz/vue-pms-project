@@ -1,4 +1,12 @@
-<script setup></script>
+<script setup>
+const emit = defineEmits(["search"]);
+
+function keyupHandler(e) {
+	emit("search", e.target.value);
+	e.target.value = "";
+	return;
+}
+</script>
 
 <template>
 	<div class="searchbar">
@@ -14,7 +22,7 @@
 				fill="#8B8B8B"
 			/>
 		</svg>
-		<input type="text" placeholder="Search" />
+		<input type="text" @keyup.enter="keyupHandler" placeholder="Search" />
 	</div>
 </template>
 

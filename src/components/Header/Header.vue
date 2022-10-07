@@ -3,8 +3,13 @@ import FilterTabs from "../FilterTabs/FilterTabs.vue";
 import PlusButton from "./PlusButton.vue";
 import SearchBar from "./SearchBar.vue";
 import ProfileDetails from "./ProfileDetails.vue";
+
+function searchTriggered(value) {
+	console.log("Search value: " + value);
+}
 function plusButtonClick() {
-	console.log("clicked");
+	console.log("PlusButton Clicked");
+	return;
 }
 </script>
 
@@ -14,7 +19,7 @@ function plusButtonClick() {
 			<div>
 				<h1 class="header_title">Projects</h1>
 			</div>
-			<SearchBar />
+			<SearchBar @search="searchTriggered" />
 			<div class="header_top_right">
 				<div class="icons_container">
 					<div class="iconumsu"></div>
@@ -36,7 +41,6 @@ function plusButtonClick() {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
-	border: 1px solid grey;
 	padding: 32px 30px;
 }
 
